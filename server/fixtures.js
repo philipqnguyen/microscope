@@ -1,5 +1,5 @@
 if (Posts.find().count() === 0) {
-  var now = new Data().getTime();
+  var now = new Date().getTime();
 
   // create two user
   var tomId = Meteor.users.insert({
