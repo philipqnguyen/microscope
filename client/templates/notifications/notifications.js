@@ -1,9 +1,9 @@
 Template.notifications.helpers({
   notifications: function () {
-    return notifications.find({userId: Meteor.userId(), read: false});
+    return Notifications.find({userId: Meteor.userId(), read: false});
   },
   notificationCount: function () {
-    this.notifications.count();
+    return Notifications.find({userId: Meteor.userId(), read: false}).count();
   }
 });
 
