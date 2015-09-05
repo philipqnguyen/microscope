@@ -3,5 +3,9 @@
     {{#each posts}}
       {{> postItem}} <!-- Replaces this inclusion w/ template of same name -->
     {{/each}}
+
+    {{#if nextPath}}
+      <a class="load-more" href="{{nextPath}}">Load more</a>
+    {{/if}}
   </div>
 </template>
